@@ -11,6 +11,9 @@ import cactus from '../assets/cactus.png'
 import cheeseplant from '../assets/cheeseplant.png'
 import Sansevieriaplant from '../assets/Sansevieriaplant.png'
 import Agaveplant from '../assets/Agaveplant.png'
+import comment1 from '../assets/comment1.png'
+import comment2 from '../assets/comment2.png'
+import comment3 from '../assets/comment3.png'
 import '../App.css';
 
 const topSellingPlants = [
@@ -59,19 +62,19 @@ const customerReviews = [
     {
         name: 'Shelly Russel',
         feedback: 'Just got my hands on some absolutely awesome plants, and I couldn’t be happier!',
-        image: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=80',
+        image: comment1,
     },
     {
         name: 'Lula Rolfson',
         feedback:
             'Each one has its own unique charm and personality, and they’ve already started brightening up my space. The vibrant colors and fresh greenery make such a huge difference in my home.',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+        image: comment2,
     },
     {
         name: 'Carol Huels',
         feedback:
             'It’s like bringing a little piece of nature indoors. Definitely worth the investment—my plant collection has never looked better!',
-        image: 'https://images.unsplash.com/photo-1450297350677-623de575f31c?auto=format&fit=crop&w=200&q=80',
+        image: comment3,
     },
 ];
 
@@ -137,13 +140,11 @@ function Section() {
 
                 <div className='navbar px-6 py-4 flex items-center justify-between'>
 
-                    {/* Logo */}
                     <div className='navbar-logo flex items-center gap-2'>
                         <img className="w-[40px] h-[48px] object-contain" src={logo} alt="logo" />
                         <h1 className="text-2xl font-bold text-white font-inter">FloraVision.</h1>
                     </div>
 
-                    {/* Menu with Indie Flower */}
                     <div className='navbar-menu flex items-center gap-16 text-[23px] font-[400]'>
                         <a href="#" className="text-white">Home</a>
 
@@ -158,7 +159,6 @@ function Section() {
                         <a href="#" className="text-white">Contact</a>
                     </div>
 
-                    {/* Buttons */}
                     <div className='navbar-button flex items-center gap-10'>
                         <button className="text-white">
                             <img className="w-[20px] h-[20px] object-contain" src={searchicon} alt="search" />
@@ -191,7 +191,6 @@ function Section() {
   bg-white/5 backdrop-blur-[17px]
   px-7 py-6
 ">
-                            {/* USER INFO */}
                             <div className="flex items-center gap-4">
                                 <div className="w-[72px] h-[72px] rounded-full overflow-hidden border-2 border-white/40">
                                     <img
@@ -272,7 +271,6 @@ function Section() {
                         </div>
                     </div>
 
-                    {/* Our Trendy Plants Section */}
                     <div className="absolute top-[980px] left-1/2 -translate-x-1/2 w-[1250px]">
                         <div className="text-center">
                             <div className="inline-flex items-center gap-2">
@@ -339,7 +337,6 @@ function Section() {
                             </div>
                         </div>
 
-                        {/* Top Selling Section */}
                         <div className="mt-24 text-center">
                             <div className="inline-flex items-center gap-2">
                                 <CornerLeft className="w-[52px] h-[52px] relative left-[50px] top-[10px]" />
@@ -355,7 +352,6 @@ function Section() {
                                         key={plant.name}
                                         className="relative w-[600px] h-[544px]   px-8 pb-8 text-left  overflow-visible"
                                     >
-                                        {/* Decorative SVG background (keeps card content unchanged) */}
                                         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 512 624" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                                             <foreignObject x="-15" y="-15" width="542" height="653.157">
                                                 <div
@@ -409,7 +405,6 @@ function Section() {
                                         key={plant.name}
                                         className="relative w-[600px] h-[544px] rounded-[40px] px-8 pb-8 text-left  overflow-visible"
                                     >
-                                        {/* Decorative SVG background for premium cards */}
                                         <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 512 624" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <foreignObject x="-15" y="-15" width="542" height="653.157">
                                                 <div xmlns="http://www.w3.org/1999/xhtml" style={{ clipPath: `url(#bgblur_premium_${idx}_11_19_clip_path)`, height: '100%', width: '100%' }} />
@@ -443,8 +438,6 @@ function Section() {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Customer Review Section */}
                         <div className="mt-24 text-center">
                             <div className="inline-flex items-center gap-2">
                                 <CornerLeft className="w-[48px] h-[48px]" />
@@ -492,8 +485,6 @@ function Section() {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Best O2 Section */}
                         <div className="mt-20 text-center">
                             <div className="inline-flex items-center gap-2">
                                 <CornerLeft className="w-[52px] h-[52px] relative left-[50px] top-[10px]" />
@@ -546,8 +537,6 @@ function Section() {
                             <span className="w-3 h-3 rounded-full border bg-white border-white/60"></span>
                             <span className="w-3 h-3 rounded-full border bg-white border-white/60"></span>
                         </div>
-
-                        {/* Footer */}
                         <div className="mt-24 text-white border-white/10 pt-16 font-inter">
                             <div className="flex flex-col xl:flex-row items-start gap-17">
                                 <div className="flex-1 space-y-6 h-[100px]">
