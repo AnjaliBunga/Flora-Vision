@@ -1,28 +1,32 @@
 # FloraVision
 
-FloraVision is a single-page concept store for premium indoor plants. It combines high-contrast UI, glassmorphism details, and story-driven content to spotlight curated collections, testimonials, and hero merchandising. The site is implemented with React 19, Vite, and TailwindCSS for a fast, modern development experience.
+FloraVision is a high-fidelity single-page storefront for premium indoor plants. The interface blends cinematic imagery, glassmorphism panels, and story-driven merchandising to spotlight curated collections, testimonials, and newsletter capture. The site is powered by React 19, Vite, and TailwindCSS for a fast, modern development workflow.
 
-## Features
+## Live Demo
 
-- Immersive hero section with layered imagery, CTA buttons, and motion-ready controls.
-- Trendy plants carousel highlighting curated desk plants with pricing and quick actions.
-- Top-selling and premium plant cards powered by structured data arrays in `src/components/section.jsx`.
-- Social-proof block with stylized customer testimonials and reusable `StarStrip` SVG.
-- Newsletter signup form and footer quick links to mimic a full storefront experience.
+- Production preview: [flora-vision-tawny.vercel.app](https://flora-vision-tawny.vercel.app/)
+
+## Highlights
+
+- Hero narrative with layered imagery, dual CTAs, and motion-ready controls.
+- Trendy plant spotlight modules featuring price callouts and add-to-bag actions.
+- Top-selling and premium plant grids defined via structured data in `src/components/section.jsx`.
+- Customer review block with reusable `StarStrip` SVG for rating consistency.
+- Newsletter form, quick links, and social handles to simulate a full retail footer.
 
 ## Tech Stack
 
-- React 19 with functional components.
-- Vite 7 bundler for instant dev server and optimized builds.
-- TailwindCSS 3 for utility-first styling, translucency effects, and responsive layouts.
-- Lucide icons plus custom SVG assets for bespoke ornamentation.
+- React 19 functional components.
+- Vite 7 dev server and build tooling.
+- TailwindCSS 3 for utility-first styling and translucency effects.
+- Lucide React icons plus bespoke SVG ornamentation.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ (LTS recommended)
-- npm 9+ (ships with Node; use `corepack enable` if you prefer pnpm/yarn)
+- Node.js ≥ 18 (LTS recommended)
+- npm ≥ 9 (bundled with Node; enable Corepack if using pnpm/yarn)
 
 ### Installation
 
@@ -32,35 +36,35 @@ cd Floravision
 npm install
 ```
 
-### Available Scripts
+### Scripts
 
-- `npm run dev` – Launch Vite dev server with HMR.
-- `npm run build` – Create a production build in `dist`.
-- `npm run preview` – Serve the build locally for QA.
-- `npm run lint` – Run ESLint over the project.
+- `npm run dev` – start Vite with HMR.
+- `npm run build` – generate an optimized `dist` bundle.
+- `npm run preview` – locally preview the production build.
+- `npm run lint` – run ESLint across the project.
 
 ## Project Structure
 
 ```
 Floravision/
-├─ public/               # Static assets served as-is
+├─ public/               # Static assets served verbatim
 ├─ src/
-│  ├─ assets/            # Images used throughout the hero and product cards
+│  ├─ assets/            # Imagery for hero, product cards, and reviews
 │  ├─ components/
-│  │  └─ section.jsx     # Main landing page layout and data arrays
-│  ├─ App.jsx            # Mounts the Section component
+│  │  └─ section.jsx     # Primary landing page layout + data arrays
+│  ├─ App.jsx            # Root component mounting Section
 │  ├─ App.css & index.css# Tailwind layers and custom overrides
-│  └─ main.jsx           # React entry point
+│  └─ main.jsx           # React entry
 ├─ package.json
 └─ README.md
 ```
 
-## Customization Tips
+## Customization
 
-- Update plant listings, prices, and testimonials by editing the `topSellingPlants`, `premiumPlants`, and `customerReviews` arrays in `src/components/section.jsx`.
-- Replace imagery inside `src/assets` with your own exports; adjust imports at the top of `section.jsx`.
-- Tailwind classes define nearly all layout/styling. Extend or override them in `src/App.css` or via Tailwind config if you need theme-level changes.
+- Update products, pricing, and testimonials by editing `topSellingPlants`, `premiumPlants`, and `customerReviews` in `src/components/section.jsx`.
+- Swap imagery inside `src/assets` and adjust import paths at the top of `section.jsx`.
+- Tailwind classes handle most layout/styling; extend via `src/App.css` or `tailwind.config.js` for theme updates.
 
 ## Deployment
 
-Deploy the `dist` build folder to any static host (Netlify, Vercel, GitHub Pages). Ensure your host serves `index.html` for unknown routes since this is a single-page React app.
+Run `npm run build` and deploy the `dist` directory to any static host (Vercel, Netlify, GitHub Pages). Configure the host to serve `index.html` for unknown routes since the site is a single-page React app.
