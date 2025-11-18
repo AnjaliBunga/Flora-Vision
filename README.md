@@ -1,16 +1,66 @@
-# React + Vite
+# FloraVision
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FloraVision is a single-page concept store for premium indoor plants. It combines high-contrast UI, glassmorphism details, and story-driven content to spotlight curated collections, testimonials, and hero merchandising. The site is implemented with React 19, Vite, and TailwindCSS for a fast, modern development experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Immersive hero section with layered imagery, CTA buttons, and motion-ready controls.
+- Trendy plants carousel highlighting curated desk plants with pricing and quick actions.
+- Top-selling and premium plant cards powered by structured data arrays in `src/components/section.jsx`.
+- Social-proof block with stylized customer testimonials and reusable `StarStrip` SVG.
+- Newsletter signup form and footer quick links to mimic a full storefront experience.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 with functional components.
+- Vite 7 bundler for instant dev server and optimized builds.
+- TailwindCSS 3 for utility-first styling, translucency effects, and responsive layouts.
+- Lucide icons plus custom SVG assets for bespoke ornamentation.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18+ (LTS recommended)
+- npm 9+ (ships with Node; use `corepack enable` if you prefer pnpm/yarn)
+
+### Installation
+
+```bash
+git clone <repo-url>
+cd Floravision
+npm install
+```
+
+### Available Scripts
+
+- `npm run dev` – Launch Vite dev server with HMR.
+- `npm run build` – Create a production build in `dist`.
+- `npm run preview` – Serve the build locally for QA.
+- `npm run lint` – Run ESLint over the project.
+
+## Project Structure
+
+```
+Floravision/
+├─ public/               # Static assets served as-is
+├─ src/
+│  ├─ assets/            # Images used throughout the hero and product cards
+│  ├─ components/
+│  │  └─ section.jsx     # Main landing page layout and data arrays
+│  ├─ App.jsx            # Mounts the Section component
+│  ├─ App.css & index.css# Tailwind layers and custom overrides
+│  └─ main.jsx           # React entry point
+├─ package.json
+└─ README.md
+```
+
+## Customization Tips
+
+- Update plant listings, prices, and testimonials by editing the `topSellingPlants`, `premiumPlants`, and `customerReviews` arrays in `src/components/section.jsx`.
+- Replace imagery inside `src/assets` with your own exports; adjust imports at the top of `section.jsx`.
+- Tailwind classes define nearly all layout/styling. Extend or override them in `src/App.css` or via Tailwind config if you need theme-level changes.
+
+## Deployment
+
+Deploy the `dist` build folder to any static host (Netlify, Vercel, GitHub Pages). Ensure your host serves `index.html` for unknown routes since this is a single-page React app.
